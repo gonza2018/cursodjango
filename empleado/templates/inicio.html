@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Página de Inicio Sistema de Empleados
+{% endblock title %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<!-- Inicio de la imagen de portada -->
+
+<div class="orbit" role="region" aria-label="Puente Carretero Pictures" data-orbit>
+    <div class="orbit-wrapper">
+        <div class="orbit-controls">
+            <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+            <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+        </div>
+        <ul class="orbit-container">
+            <li class="orbit-slide">
+                <figure class="orbit-figure">
+                    <img class="orbit-image" src="{% static 'img/portada.jpg' %}" alt="Space">
+                    <figcaption class="orbit-caption">Puente Carretero y el estadio único.</figcaption>
+                </figure>
+            </li>
+            <li class="orbit-slide">
+                <figure class="orbit-figure">
+                    <img class="orbit-image" src="{% static 'img/puente_carretero_estadio.jpg' %}" alt="Space">
+                    <figcaption class="orbit-caption">Puente Carretero y el estadio.</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Fin de la imagen de portada -->
+
+<!-- bloque de bienvenida -->
+<div class = "grid-x align-center">
+    <h1 class = "cell large-8" style="font-size: 25px; text-align: center;">
+        Bienvenidos al Sistema de Registro de Empleados
+    </h1>
+    <div class="cell large-7">
+        <div class="callout success">
+            <h5>Registra y controla empleados</h5>
+            <p>
+                Programar hoy es una carrera entre los ingenieros de software tratando de construir más grandes y mejores programas
+                a
+                prueba de tontos y el universo tratando de crear idiotas más grandes y mejores. Hasta ahora el universo está
+                ganando.
+            </p>
+            <p>
+                No te preocupes si no funciona bien. Si todo lo hiciera, no tendrías trabajo.
+            </p>
+            <a href="#">Ver empleados</a>
+        </div>
+    </div>
+</div>
+
+<!-- fin de bloque de bienvenida-->
+
+{% endblock content %}
