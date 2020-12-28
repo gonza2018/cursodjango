@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Registrar departamento
+{% endblock title %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell">Registrar nuevo departamento</h1>
+        <div class="cell">
+            <form class="cell callout grid-x grid-margin-x" method="POST"> {% csrf_token %}
+                <div class="cell medium-6">
+                    <label>Nombre:
+                        {{ form.nombre }}
+                    </label>
+                </div>
+                <div class="cell medium-6">
+                    <label>Apellidos:
+                        {{ form.apellidos }}
+                    </label>
+                </div>
+                <div class="cell medium-6">
+                    <label>Departamento:
+                        {{ form.departamento }}
+                    </label>
+                </div>
+                <div class="cell medium-6">
+                    <label>Nombre Corto:
+                        {{ form.shor_name }}
+                    </label>
+                </div>
+                <div class="cell medium-12">
+                    <button type="submit" class="success button">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
